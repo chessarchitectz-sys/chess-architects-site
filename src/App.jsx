@@ -227,55 +227,81 @@ function App() {
       title: "Beginner",
       subtitle: "Per Month",
       priceINR: "1500",
-      priceSGD: "150",
-      priceAED: "299",
+      priceSGD: "100",
+      priceAED: "399",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
         "One masterclass per month",
-        "Access to class resources"
+        "Access to class resources",
+        "Help with preparation before tournaments with master coach"
       ]
     },
     {
       title: "Intermediate",
       subtitle: "Per Month",
       priceINR: "1800",
-      priceSGD: "200",
-      priceAED: "399",
-      features: [
-        "Twice a week interactive sessions",
-        "One tournament every month",
-        "One masterclass per month",
-        "Access to class resources"
-      ]
-    },
-    {
-      title: "Advanced",
-      subtitle: "Per Month",
-      priceINR: "2000",
-      priceSGD: "250",
+      priceSGD: "125",
       priceAED: "499",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
         "One masterclass per month",
-        "Access to class resources"
+        "Access to class resources",
+        "Help with preparation before tournaments with master coach"
       ]
     },
     {
-      title: "Individual / 1-1 Classes",
+      title: "Advanced",
+      subtitle: "Per Month",
+      priceINR: "2200",
+      priceSGD: "150",
+      priceAED: "599",
+      features: [
+        "Twice a week interactive sessions",
+        "One tournament every month",
+        "One masterclass per month",
+        "Access to class resources",
+        "Help with preparation before tournaments with master coach"
+      ]
+    },
+    {
+      title: "One on One",
       subtitle: "Per Month",
       priceINR: "4500",
-      priceSGD: "500",
+      priceSGD: "250",
       priceAED: "999",
       features: [
         "Twice a week personalized sessions",
         "One tournament every month",
         "One masterclass per month",
-        "Access to class resources"
+        "Access to class resources",
+        "Help with preparation before tournaments with master coach"
       ]
     }
   ]
+
+  // Get price based on user's country
+  const getPrice = (plan) => {
+    if (userCountry === 'SG') {
+      return `S$${plan.priceSGD}`
+    } else if (userCountry === 'AE') {
+      return `AED ${plan.priceAED}`
+    } else {
+      return `₹${plan.priceINR}`
+    }
+  }
+
+  // Get currency symbol
+  const getCurrency = () => {
+    if (userCountry === 'SG') {
+      return 'SGD'
+    } else if (userCountry === 'AE') {
+      return 'AED'
+    } else {
+      return 'INR'
+    }
+  }
 
   const testimonials = [
     {
@@ -566,9 +592,7 @@ function App() {
                   ))}
                 </ul>
                 <h3 className="pricing-price">
-                  {userCountry === 'SG' ? `SGD ${plan.priceSGD}` : 
-                   userCountry === 'AE' ? `AED ${plan.priceAED}` : 
-                   `₹${plan.priceINR}`}
+                  {getPrice(plan)}
                 </h3>
                 <div className="pricing-actions">
                   <button className="btn-secondary" onClick={() => setIsModalOpen(true)}>Book Demo</button>
