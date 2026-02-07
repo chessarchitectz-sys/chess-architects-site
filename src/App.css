@@ -125,6 +125,15 @@
   z-index: 0;
 }
 
+.hero-swiper .swiper-slide {
+  opacity: 0;
+}
+
+.hero-swiper .swiper-slide-active,
+.hero-swiper .swiper-slide-duplicate-active {
+  opacity: 1;
+}
+
 .hero-slide {
   width: 100%;
   height: 100vh;

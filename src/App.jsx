@@ -11,6 +11,16 @@ import {
   Award, Users, Star, ChevronRight, Play, Phone, Mail,
   Facebook, Instagram, Linkedin, ShoppingCart, Menu, X
 } from 'lucide-react'
+import carousel1 from './assets/Carousel1.png'
+import carousel2 from './assets/carousel2.png'
+import carousel3 from './assets/carousel3.png'
+import carousel4 from './assets/carousel4.png'
+import advancedChess from './assets/advanced chess.png'
+import oneOnOne from './assets/one on one.png'
+import coachAtharva from './assets/Coach Atharva.jpeg'
+import coachPruthviraj from './assets/Coach Pruthviraj.jpeg'
+import coachPranav from './assets/Coach Pranav.jpeg'
+import coachMithilesh from './assets/Coach Mithilesh.jpeg'
 import './App.css'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3001'
@@ -68,7 +78,7 @@ function App() {
       subtitle: "Your Child's Gateway to Brilliance",
       title: "We make Kids Smarter and Sharper through Chess",
       description: "Best Online Chess Training for Kids, Students of Beginner, Intermediate & Advanced Levels",
-      image: "/src/assets/Carousel1.png",
+      image: carousel1,
       buttonText: "Learn More",
       quote: ""
     },
@@ -76,7 +86,7 @@ function App() {
       subtitle: "Expert Online Chess Coaching",
       title: "Transform Your Child's Mind with Strategic Thinking",
       description: "Join thousands of students worldwide learning chess from certified masters and grandmasters",
-      image: "/src/assets/carousel2.png",
+      image: carousel2,
       buttonText: "Start Learning",
       quote: ""
     },
@@ -84,7 +94,7 @@ function App() {
       subtitle: "Build Champions of Tomorrow",
       title: "Unlock Your Child's Full Potential with Chess",
       description: "Develop critical thinking, problem-solving skills, and academic excellence through chess training",
-      image: "/src/assets/carousel3.png",
+      image: carousel3,
       buttonText: "Book Demo",
       quote: ""
     },
@@ -92,7 +102,7 @@ function App() {
       subtitle: "Interactive Live Classes",
       title: "Learn from Anywhere, Anytime with Expert Guidance",
       description: "Flexible online chess courses designed for beginners to advanced players aged 5-15 years",
-      image: "/src/assets/carousel4.png",
+      image: carousel4,
       buttonText: "Explore Courses",
       quote: ""
     }
@@ -211,14 +221,14 @@ function App() {
       age: "5-15 years",
       description: "Embark on a lifelong chess mastery journey with our advanced course. We're here to guide and inspire you as you continue your passion for chess making you strong in chess and life.",
       duration: "12+ Months",
-      image: "/src/assets/advanced chess.png"
+      image: advancedChess
     },
     {
       title: "Individual / 1-1 Classes",
       age: "Age 5+",
       description: "Experience personalized chess growth with our individual lessons. Dive into tailored sessions where one dedicated tutor empowers one student, ensuring focused attention and customized learning for optimal skill development.",
       duration: "Flexible",
-      image: "/src/assets/one on one.png"
+      image: oneOnOne
     }
   ]
 
@@ -373,22 +383,22 @@ function App() {
     {
       name: "Atharva Madkar",
       rating: "2010",
-      image: "/src/assets/Coach Atharva.jpeg"
+      image: coachAtharva
     },
     {
       name: "Pruthviraj Patil",
       rating: "1732",
-      image: "/src/assets/Coach Pruthviraj.jpeg"
+      image: coachPruthviraj
     },
     {
       name: "Pranav Burli",
       rating: "1726",
-      image: "/src/assets/Coach Pranav.jpeg"
+      image: coachPranav
     },
     {
       name: "Mithilesh Pandit",
       rating: "1703",
-      image: "/src/assets/Coach Mithilesh.jpeg"
+      image: coachMithilesh
     }
   ]
 
@@ -432,6 +442,7 @@ function App() {
         <Swiper
           modules={[Autoplay, Pagination, Navigation, EffectFade]}
           effect="fade"
+          fadeEffect={{ crossFade: true }}
           autoplay={{
             delay: 4000,
             disableOnInteraction: false,
