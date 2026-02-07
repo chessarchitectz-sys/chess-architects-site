@@ -901,6 +901,27 @@ function App() {
           New Enquiry
         </a>
       </div>
+
+      {/* Mobile Sticky CTA Bar */}
+      <div className="mobile-cta-bar">
+        <button className="cta-btn cta-demo" onClick={() => setIsModalOpen(true)}>
+          Book Demo
+        </button>
+        <a className="cta-btn cta-call" href="tel:+919209655316">
+          Call
+        </a>
+        <a
+          className="cta-btn cta-whatsapp"
+          href="https://wa.me/919209655316?text=Hi,%20I%20have%20a%20new%20enquiry%20about%20chess%20classes"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WhatsApp
+        </a>
+        <button className="cta-btn cta-contact" onClick={() => scrollToSection('contact')}>
+          Contact
+        </button>
+      </div>
     </div>
   )
 }

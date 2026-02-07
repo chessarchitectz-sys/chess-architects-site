@@ -1181,6 +1181,69 @@ section {
   z-index: 1000;
 }
 
+.mobile-cta-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: none;
+  gap: 8px;
+  padding: 10px 12px;
+  background: rgba(12, 14, 20, 0.95);
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 998;
+}
+
+.mobile-cta-bar .cta-btn {
+  flex: 1;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 44px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease, border 0.15s ease;
+}
+
+.mobile-cta-bar .cta-btn:active {
+  transform: translateY(1px);
+}
+
+.mobile-cta-bar .cta-demo {
+  background: linear-gradient(135deg, #7c3aed, #4f46e5);
+  border: 1px solid rgba(124, 58, 237, 0.45);
+}
+
+.mobile-cta-bar .cta-whatsapp {
+  background: rgba(37, 211, 102, 0.18);
+  border: 1px solid rgba(37, 211, 102, 0.35);
+}
+
+.mobile-cta-bar .cta-call {
+  background: rgba(59, 130, 246, 0.18);
+  border: 1px solid rgba(59, 130, 246, 0.35);
+}
+
+.mobile-cta-bar .cta-contact {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+@media (max-width: 768px) {
+  .mobile-cta-bar {
+    display: flex;
+  }
+
+  .app {
+    padding-bottom: 80px;
+  }
+}
+
 .whatsapp-float-btn {
   display: flex;
   align-items: center;
