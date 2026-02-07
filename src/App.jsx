@@ -674,7 +674,7 @@ function App() {
                 </div>
                 <div className="coach-info">
                   <h3 className="coach-name">{coach.name}</h3>
-                  <p className="coach-rating">FIDE Rating: {coach.rating}</p>
+                  <p className="coach-rating">International FIDE Rating: {coach.rating}</p>
                 </div>
               </motion.div>
             ))}
