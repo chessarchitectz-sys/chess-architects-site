@@ -1240,7 +1240,8 @@ section {
   }
 
   .floating-whatsapp-buttons {
-    display: none;
+    bottom: 90px;
+    right: 16px;
   }
 
   .app {
