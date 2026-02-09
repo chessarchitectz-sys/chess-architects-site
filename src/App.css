@@ -1239,6 +1239,10 @@ section {
     display: flex;
   }
 
+  .floating-whatsapp-buttons {
+    display: none;
+  }
+
   .app {
     padding-bottom: 80px;
   }
