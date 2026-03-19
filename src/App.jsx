@@ -236,9 +236,7 @@ function App() {
     {
       title: "Beginner",
       subtitle: "Per Month",
-      priceINR: "1500",
-      priceSGD: "100",
-      priceAED: "399",
+      priceAUD: "80",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -250,9 +248,7 @@ function App() {
     {
       title: "Intermediate",
       subtitle: "Per Month",
-      priceINR: "1800",
-      priceSGD: "125",
-      priceAED: "499",
+      priceAUD: "100",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -264,9 +260,7 @@ function App() {
     {
       title: "Advanced",
       subtitle: "Per Month",
-      priceINR: "2200",
-      priceSGD: "150",
-      priceAED: "599",
+      priceAUD: "120",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -278,9 +272,7 @@ function App() {
     {
       title: "One on One",
       subtitle: "Per Month",
-      priceINR: "4500",
-      priceSGD: "250",
-      priceAED: "999",
+      priceAUD: "150",
       features: [
         "Twice a week personalized sessions",
         "One tournament every month",
@@ -291,26 +283,14 @@ function App() {
     }
   ]
 
-  // Get price based on user's country
+  // Get fixed AUD price
   const getPrice = (plan) => {
-    if (userCountry === 'SG') {
-      return `S$${plan.priceSGD}`
-    } else if (userCountry === 'AE') {
-      return `AED ${plan.priceAED}`
-    } else {
-      return `₹${plan.priceINR}`
-    }
+    return `A$${plan.priceAUD}`
   }
 
-  // Get currency symbol
+  // Get currency label
   const getCurrency = () => {
-    if (userCountry === 'SG') {
-      return 'SGD'
-    } else if (userCountry === 'AE') {
-      return 'AED'
-    } else {
-      return 'INR'
-    }
+    return 'AUD'
   }
 
   const testimonials = [
