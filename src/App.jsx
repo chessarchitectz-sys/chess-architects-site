@@ -714,6 +714,7 @@ function App() {
                   <option>US (+1)</option>
                   <option>UK (+44)</option>
                   <option>UAE (+971)</option>
+                  <option>AU (+61)</option>
                 </select>
                 <input
                   type="tel"
@@ -848,6 +849,7 @@ function App() {
                       <option>US (+1)</option>
                       <option>UK (+44)</option>
                       <option>UAE (+971)</option>
+                      <option>AU (+61)</option>
                     </select>
                     <input
                       type="tel"
