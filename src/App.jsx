@@ -236,7 +236,7 @@ function App() {
     {
       title: "Beginner",
       subtitle: "Per Month",
-      priceAUD: "80",
+      priceAED: "210",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -248,7 +248,7 @@ function App() {
     {
       title: "Intermediate",
       subtitle: "Per Month",
-      priceAUD: "100",
+      priceAED: "265",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -260,7 +260,7 @@ function App() {
     {
       title: "Advanced",
       subtitle: "Per Month",
-      priceAUD: "120",
+      priceAED: "320",
       features: [
         "Twice a week interactive sessions",
         "One tournament every month",
@@ -272,7 +272,7 @@ function App() {
     {
       title: "One on One",
       subtitle: "Per Month",
-      priceAUD: "150",
+      priceAED: "500",
       features: [
         "Twice a week personalized sessions",
         "One tournament every month",
@@ -283,14 +283,14 @@ function App() {
     }
   ]
 
-  // Get fixed AUD price
+  // Get fixed AED price
   const getPrice = (plan) => {
-    return `A$${plan.priceAUD}`
+    return `AED ${plan.priceAED}`
   }
 
   // Get currency label
   const getCurrency = () => {
-    return 'AUD'
+    return 'AED'
   }
 
   const testimonials = [
